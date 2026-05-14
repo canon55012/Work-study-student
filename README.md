@@ -85,6 +85,7 @@ python main.py
 
 ## 專案架構
 
+```bash
 llm_agent/
 │
 ├── agent/                 # Agent core（推理 / tool calling）
@@ -98,6 +99,7 @@ llm_agent/
 ├── requirements_llm.txt   # 依賴套件
 ├── .gitignore
 └── README.md
+```
 
 ## 整體流程
 
