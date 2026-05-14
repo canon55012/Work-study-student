@@ -55,6 +55,7 @@
 
 ```bash
 python3 -m venv Work-study-student
+```
 
 ### 2️ 進入虛擬環境並安裝所需library
 
@@ -64,11 +65,13 @@ source Work-study-student/bin/activate
 cd Work-study-student
 
 pip install -r requirements_llm.txt
+```
 
 ### 3 啟動 MCP Server
 
 ```bash
 uvicorn mcp_server.server:app --host 0.0.0.0 --port 8000 --reload
+```
 
 ### 4 啟動 MCP Agent
 
@@ -78,6 +81,7 @@ source Work-study-student/bin/activate
 cd Work-study-student
 
 python main.py
+```
 
 ## 專案架構
 
@@ -113,6 +117,6 @@ MCP Server execution
 return result
    ↓
 final response
-
+```
 
 
