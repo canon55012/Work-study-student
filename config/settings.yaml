@@ -1,0 +1,29 @@
+# llm 基本 url、model_name
+# "http://140.110.160.97:30002/v1"
+# "ollama"
+# "llama4-scout"
+openai_base_url: "http://140.110.160.178:9000/v1"
+api_key : "z9Qm8vK2pR7xL0nW6cT4aB9sD1fG5ggjGRE4hJ8kM3yU6iO2pL7xV4nC9eR1tS8wQ5dZ0"
+llm_model_name : "google/gemma-4-31b-it"
+
+# 預設 prompt 目前預設是 basic, 共有 basic , structured, article_qa, k8s_instruction 三總
+prompt_style: "mcp_tool"
+
+# reranker 一次輸出數量
+reranker_top: 5
+
+# Qdrant name 機敏雲、可信賴雲
+SensiMesh_Qdrant_vector_collection_name: "SensiMesh_20250519_512_10_bge-m3"
+trusted_cloud_Qdrant_vector_collection_name: "trusted-cloud_20250701_512_10_bge-m3"
+
+# embed_model name 
+embed_model_name: "bge-m3"
+
+# 預設溫度參數
+temperature: 0.8
+
+# image IP 設定，用來處理圖片抓取用的
+server:
+  host_ip: "140.110.160.24"
+  port: 8005
+  image_base_url: "http://140.110.160.10:7001/images"
