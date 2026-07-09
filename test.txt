@@ -1,0 +1,4 @@
+train_heat_1D(alpha=0.1,epochs=1000)
+query_u(x=0.3,t=0.5)
+slice_t(t=0.5)
+Compute error with alpha=0.1
