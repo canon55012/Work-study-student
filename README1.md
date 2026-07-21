@@ -55,51 +55,35 @@ MCP Server 提供 PINN 工具，Agent 負責推理並自動呼叫工具，
 
 ## 安裝步驟
 
-### 1️ Clone Repository
+### 1️ 建立虛擬環境
 
 ```bash
-git clone -b Eric-feature-mcp-agent https://github.com/canon55012/Work-study-student.git
+python3 -m venv Work-study-student
+```
+
+### 2️ 進入虛擬環境並安裝所需library
+
+```bash
+source Work-study-student/bin/activate
 
 cd Work-study-student
-```
 
----
-
-### 2️ 建立虛擬環境
-
-```bash
-python3 -m venv .venv
-
-source .venv/bin/activate
-```
-
-Windows
-
-```bash
-.venv\Scripts\activate
-```
-
----
-
-### 3️ 安裝套件
-
-```bash
 pip install -r requirements_llm.txt
 ```
 
----
-
-### 4️ 啟動 MCP Server
+### 3 啟動 MCP Server
 
 ```bash
 uvicorn mcp_server.server:app --host 0.0.0.0 --port 8000 --reload
 ```
 
----
-
-### 5️ 啟動 MCP Agent
+### 4 啟動 MCP Agent
 
 ```bash
+source Work-study-student/bin/activate
+
+cd Work-study-student
+
 python main.py
 ```
 
