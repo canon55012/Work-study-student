@@ -16,3 +16,7 @@ rich
 
 sympy
 httpx
+
+numpy
+matplotlib
+torch
