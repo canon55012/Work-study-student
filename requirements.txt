@@ -1,0 +1,18 @@
+# ── Web / MCP ────────────────────────────────────────────────
+flask
+fastmcp
+mcp
+uvicorn
+
+# ── LLM  ───────────────────────────────────────────────
+anthropic
+openai
+python-dotenv
+httpx
+
+# ── FAQ ────────────────────────
+numpy
+scikit-learn
+
+# ── 成本最佳化────────────────
+scipy

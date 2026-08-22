@@ -1,0 +1,235 @@
+{
+  "snapshot": {
+    "model": "google/gemma-4-31b-it",
+    "model_served": "google/gemma-4-31b-it",
+    "gpus": [],
+    "gpu_count": 0,
+    "gpu_types": [],
+    "endpoint": "http://140.110.160.178:8000/v1",
+    "host": "student2",
+    "date": "2026-08-15"
+  },
+  "args": {
+    "quick": true,
+    "concurrency": "1,2,4",
+    "requests": 8
+  },
+  "records": [
+    {
+      "in_tokens": 496,
+      "out_tokens": 18,
+      "actual_in_tokens": 496,
+      "concurrency": 1,
+      "ok": true,
+      "throughput_rps": 1.373,
+      "out_tok_per_s": 24.7,
+      "ttft_p50": 0.099,
+      "ttft_p95": 0.1,
+      "tpot_mean": 0.037,
+      "gain_vs_prev": null
+    },
+    {
+      "in_tokens": 496,
+      "out_tokens": 18,
+      "actual_in_tokens": 496,
+      "concurrency": 2,
+      "ok": true,
+      "throughput_rps": 2.456,
+      "out_tok_per_s": 44.2,
+      "ttft_p50": 0.179,
+      "ttft_p95": 0.18,
+      "tpot_mean": 0.0374,
+      "gain_vs_prev": 0.7887836853605243
+    },
+    {
+      "in_tokens": 496,
+      "out_tokens": 18,
+      "actual_in_tokens": 496,
+      "concurrency": 4,
+      "ok": true,
+      "throughput_rps": 4.002,
+      "out_tok_per_s": 72.0,
+      "ttft_p50": 0.347,
+      "ttft_p95": 0.351,
+      "tpot_mean": 0.0394,
+      "gain_vs_prev": 0.6294788273615635
+    },
+    {
+      "in_tokens": 824,
+      "out_tokens": 253,
+      "actual_in_tokens": 824,
+      "concurrency": 1,
+      "ok": true,
+      "throughput_rps": 0.105,
+      "out_tok_per_s": 26.5,
+      "ttft_p50": 0.164,
+      "ttft_p95": 0.166,
+      "tpot_mean": 0.0372,
+      "gain_vs_prev": null
+    },
+    {
+      "in_tokens": 824,
+      "out_tokens": 253,
+      "actual_in_tokens": 824,
+      "concurrency": 2,
+      "ok": true,
+      "throughput_rps": 0.203,
+      "out_tok_per_s": 51.4,
+      "ttft_p50": 0.313,
+      "ttft_p95": 0.313,
+      "tpot_mean": 0.0379,
+      "gain_vs_prev": 0.9333333333333336
+    },
+    {
+      "in_tokens": 824,
+      "out_tokens": 253,
+      "actual_in_tokens": 824,
+      "concurrency": 4,
+      "ok": true,
+      "throughput_rps": 0.383,
+      "out_tok_per_s": 96.8,
+      "ttft_p50": 0.595,
+      "ttft_p95": 0.608,
+      "tpot_mean": 0.0393,
+      "gain_vs_prev": 0.8866995073891624
+    },
+    {
+      "in_tokens": 2455,
+      "out_tokens": 510,
+      "actual_in_tokens": 2455,
+      "concurrency": 1,
+      "ok": true,
+      "throughput_rps": 0.051,
+      "out_tok_per_s": 26.0,
+      "ttft_p50": 0.493,
+      "ttft_p95": 0.497,
+      "tpot_mean": 0.0376,
+      "gain_vs_prev": null
+    },
+    {
+      "in_tokens": 2455,
+      "out_tokens": 510,
+      "actual_in_tokens": 2455,
+      "concurrency": 2,
+      "ok": true,
+      "throughput_rps": 0.098,
+      "out_tok_per_s": 49.8,
+      "ttft_p50": 0.989,
+      "ttft_p95": 0.99,
+      "tpot_mean": 0.0383,
+      "gain_vs_prev": 0.9215686274509807
+    },
+    {
+      "in_tokens": 2455,
+      "out_tokens": 510,
+      "actual_in_tokens": 2455,
+      "concurrency": 4,
+      "ok": true,
+      "throughput_rps": 0.18,
+      "out_tok_per_s": 91.4,
+      "ttft_p50": 1.631,
+      "ttft_p95": 1.994,
+      "tpot_mean": 0.0406,
+      "gain_vs_prev": 0.8367346938775508
+    }
+  ],
+  "h_c_w": {
+    "496,18": 4.002,
+    "824,253": 0.383,
+    "2455,510": 0.18
+  },
+  "h_c_w_meta": {
+    "496,18": {
+      "concurrency": 4,
+      "saturated": false,
+      "is_lower_bound": true,
+      "out_tok_per_s": 72.0,
+      "ttft_p95_ms": 351.0
+    },
+    "824,253": {
+      "concurrency": 4,
+      "saturated": false,
+      "is_lower_bound": true,
+      "out_tok_per_s": 96.8,
+      "ttft_p95_ms": 608.0
+    },
+    "2455,510": {
+      "concurrency": 4,
+      "saturated": false,
+      "is_lower_bound": true,
+      "out_tok_per_s": 91.4,
+      "ttft_p95_ms": 1994.0
+    }
+  },
+  "latency_model": {
+    "form": "h = concurrency / (a*in_tokens + b*(out_tokens-1))",
+    "concurrency": 4,
+    "ms_per_in_token": 0.6953475349909394,
+    "ms_per_out_token": 39.766666666666666,
+    "a_spread_pct": 8.30216885762542,
+    "b_spread_pct": 3.269069572506262,
+    "n_points": 3,
+    "max_err_pct": 2.098630741635497,
+    "note": "由併發 4 的 TTFT/TPOT 拆解；內插值僅供補格子，不等同飽和量測"
+  },
+  "all_saturated": false,
+  "contaminated": false,
+  "reference_concurrency": 4,
+  "h_grid": {
+    "496,18": {
+      "h": 4.002,
+      "source": "measured",
+      "concurrency": 4,
+      "saturated": false
+    },
+    "496,253": {
+      "h": 0.3858734665280342,
+      "source": "interpolated",
+      "saturated": false,
+      "err_pct": 2.098630741635497
+    },
+    "496,510": {
+      "h": 0.19430562390489522,
+      "source": "interpolated",
+      "saturated": false,
+      "err_pct": 2.098630741635497
+    },
+    "824,18": {
+      "h": 3.2025628133166677,
+      "source": "interpolated",
+      "saturated": false,
+      "err_pct": 2.098630741635497
+    },
+    "824,253": {
+      "h": 0.383,
+      "source": "measured",
+      "concurrency": 4,
+      "saturated": false
+    },
+    "824,510": {
+      "h": 0.19217649764279773,
+      "source": "interpolated",
+      "saturated": false,
+      "err_pct": 2.098630741635497
+    },
+    "2455,18": {
+      "h": 1.678477883528184,
+      "source": "interpolated",
+      "saturated": false,
+      "err_pct": 2.098630741635497
+    },
+    "2455,253": {
+      "h": 0.3410560299076765,
+      "source": "interpolated",
+      "saturated": false,
+      "err_pct": 2.098630741635497
+    },
+    "2455,510": {
+      "h": 0.18,
+      "source": "measured",
+      "concurrency": 4,
+      "saturated": false
+    }
+  },
+  "refit": true
+}

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 虛擬環境
+venv/
+.venv/
+Work-study-student/
+
+# 環境變數
+.env
+
+# 模擬 VM 狀態
+data/vm_instances.csv
+
+# 使用者隔離資料、記錄、LLM 選用狀態
+data/users/
+data/logs/
+data/llm_state.json
+*.lock
+
+# 執行期日誌（除錯 / 啟動器輸出，皆執行時產生）
+*.log
+web_dbg.log
+server.log
+
+# 系統檔
+.DS_Store
+
+# 待審查後刪除，不要上傳
+_to_review/
